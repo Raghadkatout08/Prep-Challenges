@@ -248,7 +248,7 @@ function studentsResult(arr) {
         {
             return "Failed"
         }
-        return avgResult;
+        // return avgResult;
     })
     return result;
 }
