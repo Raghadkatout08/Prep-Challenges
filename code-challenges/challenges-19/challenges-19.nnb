@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function appendAndDelete(s, t, k) {\n    // Write your code here\n    let commonLength = 0;\n\n    for (let i = 0; i < Math.min(s.length, t.length); i++) {\n\n        if (s[i] === t[i]) {\n            commonLength++;\n        }\n        else {\n            break;\n        } \n    }\n    \n    let deleteOperation = s.length - commonLength;\n    let appendOperation = t.length - commonLength;\n    let totalOperation  = deleteOperation + appendOperation;\n    \n    if((totalOperation <= k && totalOperation % 2 === k % 2) || s.length + t.length <= k )\n    {\n        return 'Yes'\n    }\n    else\n    {\n        return 'No'\n    }\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function encryption(s) {\n    // Write your code here\n    let splitWord = s.split(\" \").join(\"\")\n    let lengthWord = splitWord.length;\n    \n    let rows = Math.floor(Math.sqrt(lengthWord))\n    let cols = Math.ceil(Math.sqrt(lengthWord))\n\n    \n    if(rows * cols < lengthWord)\n    {\n        rows+=1\n    }\n    \n    let encryptionMassage = \"\";\n    \n    for (let j=0 ; j<cols ; j++)\n    {\n        for (let i=0 ; i<rows ; i++)\n        {\n            let index = j + i * cols;\n            if(index < lengthWord)\n            {\n                encryptionMassage += (splitWord[index])\n            }\n        }\n        \n        encryptionMassage += \" \"\n        \n    }\n    \n    return encryptionMassage\n\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
